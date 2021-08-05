@@ -1,0 +1,120 @@
+@media screen and (max-width: 600px) {
+    
+    // feature
+    .featured {
+        .top-header {
+            height: 100vh;
+            nav {
+                .btn {
+                    border-radius: 50%;
+                    padding: 1rem 1.1rem;
+                    span {
+                        display: none;
+                    }
+                }
+            }
+            // this could imprpve in other way
+            .featured-content {
+                flex-direction: column;
+                padding: 1rem 0;  
+                height: 800px!important;
+                .featured-text {
+                    padding: 0;
+                    h1 {
+                        width: 100%;
+                        font-size: 1.6rem;
+                    }
+                }
+                .feature-images { 
+                    display: block; 
+
+                    .feature-img1 { 
+                        width: 100%;
+                        left: 0;  
+                    }
+                    .feature-img2 { 
+                        left: 55%;
+                        top: -5%!important;
+                    }
+                    // need to recode to bring this on top
+                    .feature-img3 { 
+                        left: -70px;
+                        top: 20%; 
+                    }
+                }
+            }
+            .bgheader {
+                height: 130%;          
+                width: 300%;
+                left: -100%;
+                top: -45%;
+            }
+        }
+        .lower-header {
+            padding-top: 2rem;
+            .row {
+                flex-direction: column;
+                .col {
+                    padding: 1rem;
+                    border-right: 0;
+                    border-bottom: 1px solid $skyBlue;
+                }
+            }
+        }
+        .learn-how {
+            display: none;
+        }
+    }
+    // main
+    main {
+        section {
+            flex-direction: column;
+            padding-top: 1rem!important;
+            &:nth-child(even) {
+                flex-direction: column-reverse;
+            }
+            div {
+                margin: 1rem 0;
+                padding: 0!important;
+            }
+            .form-holder {
+                flex: 1;
+
+                form {
+                    padding: 1rem;
+                    h5 {
+                        width: 100%;
+                    }
+                    .row:nth-of-type(3) {
+                        flex-direction: column;
+                        .col:nth-of-type(2) {
+                            flex: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // footer
+    footer {
+        p {
+            margin-top: 1rem;
+        }
+        .bgfooter {
+            width: 150%;
+            height: 120%;
+            background-color: $skyBlue;
+            border-radius: 100%;
+            top: 0%;
+            left: -25%; 
+            right: 0;
+            position: absolute;
+            z-index: -1;
+
+            .logo {
+                margin-bottom: 0!important;
+            }
+        }
+    }
+  }

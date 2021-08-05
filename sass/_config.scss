@@ -1,0 +1,64 @@
+// FONT
+$font-stack:  'Hind Siliguri', sans-serif;
+$header-font: 'GothamRounded Medium', sans-serif;
+
+// COLORS 
+$skyBlue: #0da2e4;
+$navyBlue: #0d66c2;
+$darkGray: #414141;
+$lightGray: #f1f1f1;
+$gainsboro: #dcdcdc;
+$white: #fff;
+
+// set text color based on bg
+@function set-text-color($color) {
+    @if($color) {
+        @return $white;
+    } @else {
+        @return $skyBlue;
+    }
+}
+
+// set bg & text color 
+@mixin set-bg($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
+
+// MARGIN & PADDING CLASSES
+$spaceamount: (1,2,3,4,5);
+@each $space in $spaceamount {
+    .m-#{$space} {
+        margin: #{$space}rem;
+    }
+    .my-#{$space} {
+        margin: #{$space}rem 0;
+    }
+    .mx-#{$space} {
+        margin: 0 #{$space}rem;
+    }
+    .mb-#{$space} {
+        margin-bottom: #{$space}rem;
+    }
+    .ml-#{$space} {
+        margin-left: #{$space}rem;
+    }
+    .p-#{$space} {
+        padding: #{$space}rem;
+    }
+    .py-#{$space} {
+        padding: #{$space}rem 0;
+    }
+    .px-#{$space} {
+        padding: 0 #{$space}rem;
+    }
+    .pt-#{$space} {
+        padding-top: #{$space}rem;
+    }
+    .pb-#{$space} {
+        padding-bottom: #{$space}rem;
+    }
+    .pl-#{$space} {
+        padding-left: #{$space}rem;
+    }
+}
